@@ -12,7 +12,7 @@ $mech->set_fields( "passwrd" => [ 'dejean', 1 ] );
 $mech->click();
 
 # Récupération du nombre aléatoire
-my $nomre = "";
+my $nombre = "";
 $mech->get( "https://www.newbiecontest.org/epreuves/prog/prog1.php" );
 my $page = $mech->content;
 

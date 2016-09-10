@@ -31,11 +31,10 @@ if ( $page =~ /.*: (\d*)/ ) {
 
 # Calcul de l'opération
 my $resultat = "";
-$resultat = sqrt($nombre1)*$nombre2;
-print $resultat;
+$resultat = int(sqrt($nombre1)*$nombre2);
 
 # Récupération du mot de passe
-#my $password = "";
-#$mech->get( "https://www.newbiecontest.org/epreuves/prog/verifpr1.php?solution=$nombre" );
-#$page = $mech->content;
-#print $page;
+my $password = "";
+$mech->get( "https://www.newbiecontest.org/epreuves/prog/verifpr3.php?solution=$resultat" );
+$page = $mech->content;
+print $page;
