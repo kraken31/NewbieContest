@@ -1,4 +1,4 @@
-# Newbie Contest - Challenge programmation 3
+# Newbie Contest - Challenge programmation 4
 
 use WWW::Mechanize;
 
