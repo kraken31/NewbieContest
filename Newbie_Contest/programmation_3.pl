@@ -2,13 +2,19 @@
 
 use WWW::Mechanize;
 
+my $usernb = $ARGV[0];
+my $passnb = $ARGV[1];
+
 my $mech = WWW::Mechanize->new();
+
+# Définition du proxy
+$mech->proxy(['https', 'http', 'ftp'], 'http://proxy-tech.svc.ext.tdc:3128/');
 
 $mech->get( "https://www.newbiecontest.org" );
 
 # Connexion
-$mech->set_fields( "user" => [ 'kraken31', 1 ] );
-$mech->set_fields( "passwrd" => [ 'dejean', 1 ] );
+$mech->set_fields( "user" => [ $usernb, 1 ] );
+$mech->set_fields( "passwrd" => [ $passnb, 1 ] );
 $mech->click();
 
 # Récupération de l'équation
