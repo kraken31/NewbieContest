@@ -47,6 +47,9 @@ for (my $i=8; $i<20; $i++) {
 
 my $res2 = 2607893925;
 my @tab = (2,3,5,7,11,13,17,19,23,29,31,37);
+my @tabLig1 = ('A','B','C','D','E','F','G','H','I','J','K','L');
+my @tabLig2 = ('M','N','O','P','Q','R','S','T','U','V','W','X');
+my @tabLig3 = ('Y','Z','0','1','2','3','4','5','6','7','8','9');
 
 for ( $a=0; $a<10; $a++ ) {
 	for ( $b=$a+1; $b<11; $b++ ) {
@@ -61,7 +64,7 @@ for ( $a=0; $a<10; $a++ ) {
 										$resultat=$tab[$a]*$tab[$b]*$tab[$c]*$tab[$d]*$tab[$e]*$tab[$f]*$tab[$g]*$tab[$h]*$tab[$i]*$tab[$j];
 										#print "$a $b $c $d $e $f $g $h $i $j => $resultat\n";
 										if ( $resultat == $res2 ) {
-											print "$a $b $c $d $e $f $g $h $i $j\n";
+											print "$tabLig1[$a] $tabLig1[$b] $tabLig1[$c] $tabLig2[$d] $tabLig2[$e] $tabLig3[$f] $tabLig3[$g] $tabLig3[$h] $tabLig3[$i] $tabLig3[$j]\n";
 										}
 									}
 								}
